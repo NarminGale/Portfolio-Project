@@ -181,4 +181,34 @@ p {
   cursor: pointer;
   justify-self: flex-end;
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    background: var(--clr-primary-10);
+  }
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    column-gap: 2rem;
+    justify-self: flex-end;
+  }
+  .nav-links a {
+    font-weight: bold;
+    color: var(--clr-grey-1);
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    transition: var(--transition);
+  }
+  .nav-links a:hover {
+    color: var(--clr-primary-5);
+  }
+}
 /* === Navbar === */
