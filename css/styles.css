@@ -151,7 +151,6 @@ p {
     width: 95vw;
   }
 }
-
 .underline {
   width: 5rem;
   height: 0.25rem;
@@ -163,6 +162,9 @@ p {
 .section-title {
   margin-bottom: 4rem;
   text-align: center;
+}
+.bg-grey {
+  background: var(--clr-grey-10);
 }
 /* === Navbar === */
 .nav-links {
@@ -380,4 +382,36 @@ p {
   .about-info {
     align-self: center;
   }
+}
+
+/* === Services === */
+.service {
+  background: var(--clr-white);
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: var(--transition);
+}
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.service .underline {
+  width: 3rem;
+  height: 0.12rem;
+  transition: var(--transition);
+}
+.service p {
+  transition: var(--transition);
+}
+.service:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+.service:hover p {
+  color: var(--clr-white);
+}
+.service:hover .underline {
+  background: var(--clr-white);
 }
