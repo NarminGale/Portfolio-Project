@@ -124,7 +124,6 @@ p {
   letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 700;
-  -webkit-transition: var(--transition);
   transition: var(--transition);
   font-size: 0.875rem;
   border: 2px solid transparent;
@@ -212,6 +211,7 @@ p {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    -moz-column-gap: 2rem;
     column-gap: 2rem;
     justify-self: flex-end;
   }
@@ -349,6 +349,7 @@ p {
 .hero-photo {
   max-width: 20rem;
   max-height: 25rem;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: var(--radius);
   position: relative;
@@ -419,6 +420,7 @@ p {
   .services-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 2rem;
     column-gap: 2rem;
   }
 }
@@ -461,6 +463,7 @@ p {
   transition: var(--transition);
   border-radius: var(--radius);
   height: 15rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .project:hover .project-img {
@@ -485,6 +488,7 @@ p {
   .projects-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 2rem;
     column-gap: 2rem;
   }
 }
@@ -531,6 +535,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: -2;
 }
@@ -549,12 +554,29 @@ p {
 .connect {
   display: grid;
   place-items: center;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 10%,
+    100% 90%,
+    50% 100%,
+    0% 90%,
+    0% 10%
+  );
   clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0% 90%, 0% 10%);
 }
 .video-banner {
   background: var(--clr-primary-10);
   padding: 3rem 5rem 12rem 5rem;
   text-align: center;
+  -webkit-clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
   clip-path: polygon(
     0% 0%,
     100% 0%,
@@ -577,6 +599,7 @@ p {
   .skills-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 2rem;
     column-gap: 2rem;
   }
 }
@@ -698,6 +721,7 @@ p {
 }
 .card-side {
   transition: all 2s linear;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   top: 0;
@@ -705,6 +729,8 @@ p {
   width: 100%;
   height: 100%;
   border-radius: var(--radius);
+  -webkit-transform: translate3d(0, 0, 0);
+  visibility: visible;
 }
 .card-front {
   background: var(--clr-white);
@@ -727,6 +753,7 @@ p {
 }
 .card-front img {
   height: 13rem;
+  -o-object-fit: cover;
   object-fit: cover;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
@@ -739,6 +766,7 @@ p {
 .card-footer img {
   width: 2rem;
   height: 2rem;
+  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -846,7 +874,7 @@ p {
 .project-footer a:hover {
   color: var(--clr-primary-1);
 }
-.projects-page-center {
+.project-page-center {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 3rem 1.5rem;
