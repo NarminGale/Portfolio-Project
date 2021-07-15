@@ -2,7 +2,7 @@
 
 > https://portfolio-project-with-grid.netlify.app/
 
-<a href="https://comfystore-project.netlify.app/" target="_blank"><img src="./project-image.png" alt="project image"></a>
+<a href="https://portfolio-project-with-grid.netlify.app/" target="_blank"><img src="./project-image.png" alt="project image"></a>
 
 ---
 
